@@ -21,9 +21,9 @@ plistDict['key'] = args.key
 
 newPayload = PayloadDict("com.salsoftware.sal", makeNewUUID(), False, "Sal", "Sal")
 
-newPayload.addPayloadFromPlistContents(plistDict, 'com.salsoftware.sal', 'Always')
+newPayload.addPayloadFromPlistContents(plistDict, 'com.github.salopensource.sal', 'Always')
 
-filename = "com.salsoftware.sal"
+filename = "com.github.salopensource.sal"
 
 filename+="." + plistDict['key'][0:5]
 
