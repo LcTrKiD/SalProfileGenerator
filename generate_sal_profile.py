@@ -7,7 +7,7 @@ from mcxToProfile import *
 parser = argparse.ArgumentParser()
 parser.add_argument("key", help="Machine Group key")
 parser.add_argument("-u", "--url", help="Server URL to Sal. Defaults to http://sal.")
-parser.add_argument("-o", "--output", help="Path to output .mobileconfig. Defaults to 'com.salsoftware.sal.mobileconfig' in current working directory.")
+parser.add_argument("-o", "--output", help="Path to output .mobileconfig. Defaults to 'com.github.salopensource.sal' in current working directory.")
 args = parser.parse_args()
 
 plistDict = dict()
@@ -19,7 +19,7 @@ else:
 
 plistDict['key'] = args.key
 
-newPayload = PayloadDict("com.salsoftware.sal", makeNewUUID(), False, "Sal", "Sal")
+newPayload = PayloadDict("com.github.salopensource.sal", makeNewUUID(), False, "Sal", "Sal")
 
 newPayload.addPayloadFromPlistContents(plistDict, 'com.github.salopensource.sal', 'Always')
 
